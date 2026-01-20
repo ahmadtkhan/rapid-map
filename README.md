@@ -16,13 +16,13 @@ The mapper can target up to three physical memory types
 
 ## Configuration
 Architecture settings can be overridden using -p 
-'''
+```bash
 cargo run --release -- -p <has_lutram> <lutram_fraction> <has_ram1> <ram1_bits> <lbs_per_ram1> <max_width_ram1> <has_ram2> <ram2_bits> <lbs_per_ram2> <max_width_ram2>
-'''
+```
 or 
-'''
+```bash
 target/debug/ram_mapper -p true 0.75 true 8192 10 32 true 131072 300 128
-'''
+```
 * has_lutram: true/false or 1/0
 * lutram_fraction: Fraction of logic blocks that can be LUTRAM-capable (0..1)
 * has_ram1: Enable 1st BRAM
@@ -36,14 +36,14 @@ target/debug/ram_mapper -p true 0.75 true 8192 10 32 true 131072 300 128
 Atleast of LUTRAM/RAM1/RAM2 must be enabled. 
 
 Examples:
-'''
+```bash
 cargo run --release
-'''
-'''
+```
+```bash
 cargo run --release -- -p false 0.5 true 8192 10 32 true 131072 300 128
-'''
-'''
+```
+```bash
 cargo run --release -- -p false 0.5 true 16384 20 64 true 65536 200 64
-'''
+```
 
 
