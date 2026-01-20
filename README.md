@@ -10,11 +10,11 @@ The input memory instance must be defined as
 
 ## Supported Physical Implementations
 The mapper can target up to three physical memory types 
-*LUTRAM: A LUT-based small memory model. 
-*8K BRAM: Configurable capacity and logic-block spacing (default capacity is 8192 bits and spacing is 8K/10-LUTs).
-*128K BRAM: Configuratble capacity and logic-block spacing (default capacity is 131072 bits and spacing is 128K/300LUTs). 
+* LUTRAM: A LUT-based small memory model. 
+* 8K BRAM: Configurable capacity and logic-block spacing (default capacity is 8192 bits and spacing is 8K/10-LUTs).
+* 128K BRAM: Configuratble capacity and logic-block spacing (default capacity is 131072 bits and spacing is 128K/300LUTs). 
 
-##Configuration
+## Configuration
 Architecture settings can be overridden using -p 
 '''
 cargo run --release -- -p <has_lutram> <lutram_fraction> <has_ram1> <ram1_bits> <lbs_per_ram1> <max_width_ram1> <has_ram2> <ram2_bits> <lbs_per_ram2> <max_width_ram2>
@@ -23,15 +23,15 @@ or
 '''
 target/debug/ram_mapper -p true 0.75 true 8192 10 32 true 131072 300 128
 '''
-*has_lutram: true/false or 1/0
-*lutram_fraction: Fraction of logic blocks that can be LUTRAM-capable (0..1)
-*has_ram1: Enable 1st BRAM
-*ram1_bits: Capacity in bits for 1st memory block (default 8192)
-*lbs_per_ram1: Logic-block spacing for the 1st memory block (default 10 LUTs)
-*max_width_ram1: Maximum supported with non-TDP (default is 32 bits). For TDP, maximum width is max_width/2
-*ram2_bits: Capacity in bits for 2nd memory block (default 131072)
-*lbs_per_ram2: Logic-block spacing for the 2nd memory block (default 300 LUTs)
-*max_width_ram2: Maximum supported with non-TDP (default is 128 bits)
+* has_lutram: true/false or 1/0
+* lutram_fraction: Fraction of logic blocks that can be LUTRAM-capable (0..1)
+* has_ram1: Enable 1st BRAM
+* ram1_bits: Capacity in bits for 1st memory block (default 8192)
+* lbs_per_ram1: Logic-block spacing for the 1st memory block (default 10 LUTs)
+* max_width_ram1: Maximum supported with non-TDP (default is 32 bits). For TDP, maximum width is max_width/2
+* ram2_bits: Capacity in bits for 2nd memory block (default 131072)
+* lbs_per_ram2: Logic-block spacing for the 2nd memory block (default 300 LUTs)
+* max_width_ram2: Maximum supported with non-TDP (default is 128 bits)
 
 Atleast of LUTRAM/RAM1/RAM2 must be enabled. 
 
