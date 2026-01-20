@@ -1,4 +1,4 @@
-# ram-mapper
+#ram-mapper
 A fast, configurable logical to physical memory mapping tool for FPGA architectures. Takes in a set of circuits as blocks, and their logical RAMs, and selects efficient physical implementations based on the given memory block parameters. The program calculates and optimizes area as geometric-mean across all circuits. 
 
 ##Features
