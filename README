@@ -1,14 +1,14 @@
-#ram-mapper
+# ram-mapper
 A fast, configurable logical to physical memory mapping tool for FPGA architectures. Takes in a set of circuits as blocks, and their logical RAMs, and selects efficient physical implementations based on the given memory block parameters. The program calculates and optimizes area as geometric-mean across all circuits. 
 
-##Features
+## Features
 The input memory instance must be defined as 
-*ROM: Uses only one port and is never written to. 
-*SinglePort: Uses only one port, as a r/w port.
-*SimpleDualPort: Uses 1r port and 1w port. 
+* ROM: Uses only one port and is never written to. 
+* SinglePort: Uses only one port, as a r/w port.
+* SimpleDualPort: Uses 1r port and 1w port. 
 *TrueDualPort: Uses two r/w ports to do 1r and 1w, 2w, or 2r each cycle. 
 
-##Supported Physical Implementations
+## Supported Physical Implementations
 The mapper can target up to three physical memory types 
 *LUTRAM: A LUT-based small memory model. 
 *8K BRAM: Configurable capacity and logic-block spacing (default capacity is 8192 bits and spacing is 8K/10-LUTs).
