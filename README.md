@@ -6,7 +6,7 @@ The input memory instance must be defined as
 * ROM: Uses only one port and is never written to. 
 * SinglePort: Uses only one port, as a r/w port.
 * SimpleDualPort: Uses 1r port and 1w port. 
-*TrueDualPort: Uses two r/w ports to do 1r and 1w, 2w, or 2r each cycle. 
+* TrueDualPort: Uses two r/w ports to do 1r and 1w, 2w, or 2r each cycle. 
 
 ## Supported Physical Implementations
 The mapper can target up to three physical memory types 
